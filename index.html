@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="hidden_menu_checkbox" onclick="onNavCheckboxClicked()" >
+
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="Icon" class="icon" height="30" width="30"/></a>
+        </div>
+
+        <label for="hidden_menu_checkbox" class="links">
+            <a href="index.html" ontouchstart="return onNavTouch(event)" id="start">Överblick</a>
+
+            <div class="dropdown" id="start_more">
+                <a>Uppgifter och resultat</a>
+                <a>Flöde</a>
+                <a>Schema</a>
+                <a>Kalender</a>
+            </div>
+        </label> 
+
+        <div class="spacing_nav_div"></div> 
+
+        <label for=hidden_menu_checkbox class="menu_dropdown_button">
+            <img src="img/open-menu.svg" alt="open menu button" height="30" width="30"/>
+        </label>
+    </nav>
+    <main>
+        <section class="productSection">
+            <div class="productsGrid">
+                <div class="productDiv">
+
+                </div>
+            </div>
+        </section>
+        <section class="aboutSection">
+            <div class="aboutCompany">
+
+            </div>
+            <div class="founders">
+
+            </div>
+        </section>
+        <section class="contactSection">
+            <div class="contactInfoContainer">
+
+            </div>
+        </section>
+    </main>
+</body>
+</html>
