@@ -1,3 +1,11 @@
+body {
+  margin: 0;
+}
+
+a {
+  color: green;
+}
+
 nav {
   background-color: green;
   -webkit-box-shadow: 0 2px 3px pink;
@@ -295,11 +303,10 @@ nav * {
   }
 }
 
-body {
-  margin: 0;
-}
-
-a {
-  color: green;
+.productsGrid {
+  display: -ms-grid;
+  display: grid;
+  height: 70px;
+  background-color: red;
 }
 /*# sourceMappingURL=theme.css.map */
