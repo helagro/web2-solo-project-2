@@ -1,0 +1,305 @@
+nav {
+  background-color: green;
+  -webkit-box-shadow: 0 2px 3px pink;
+          box-shadow: 0 2px 3px pink;
+  display: -ms-grid;
+  display: grid;
+  font-family: 'Raleway', sans-serif;
+  -ms-grid-columns: 70px 70px;
+      grid-template-columns: 70px 70px;
+  height: 3em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: initial;
+  position: absolute;
+  top: 0;
+  z-index: 6;
+  width: 100%;
+}
+
+nav * {
+  z-index: 6;
+}
+
+.logo, .menu_dropdown_button {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 20px;
+}
+
+.icon, .menu_dropdown_button > img {
+  height: 30px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 30px;
+}
+
+.icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.links {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  background-color: green;
+  -webkit-box-shadow: 0 2px 3px pink;
+          box-shadow: 0 2px 3px pink;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% 60%;
+      grid-template-columns: 40% 60%;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+  height: 0px;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 3em;
+  -webkit-transition: height 0.3s;
+  transition: height 0.3s;
+  width: 100%;
+  z-index: 3;
+}
+
+.links > a {
+  color: var(--big-text-color);
+  font-size: 18px;
+  font-weight: 200;
+  padding-right: var(--small-screen-links-horizontal-gap);
+  text-align: right;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.dropdown {
+  background-color: var(--weak-green);
+  border: 1px solid yellow;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-column-gap: 15px;
+          column-gap: 15px;
+  display: none;
+  grid-auto-flow: row;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 6;
+  grid-row: 1 / span 6;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  -ms-grid-rows: (32px)[auto-fill];
+      grid-template-rows: repeat(auto-fill, 32px);
+  height: 100%;
+  overflow: auto;
+  padding: 20px;
+  row-gap: 15px;
+  text-align: center;
+  width: 100%;
+}
+
+.dropdown > a {
+  color: var(--medium-text-color);
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.dropdown_main_link {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.dropdown:hover, #start:hover ~ #start_more, #time_planning:hover ~ #time_planning_more, #courses:hover ~ #courses_more, #education:hover ~ #education_more, #attendance:hover ~ #attendance_more, #other:hover ~ #other_more {
+  display: -ms-grid !important;
+  display: grid !important;
+}
+
+#time_planning {
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+#courses {
+  -ms-grid-row: 3;
+  grid-row: 3;
+}
+
+#education {
+  -ms-grid-row: 4;
+  grid-row: 4;
+}
+
+#attendance {
+  -ms-grid-row: 5;
+  grid-row: 5;
+}
+
+#other {
+  -ms-grid-row: 6;
+  grid-row: 6;
+}
+
+.spacing_nav_div {
+  display: none;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  z-index: 0;
+}
+
+#hidden_menu_checkbox {
+  display: none;
+  float: right;
+}
+
+#hidden_menu_checkbox:checked ~ .links {
+  height: 12.5em;
+}
+
+.current-link {
+  color: #888 !important;
+}
+
+#dimmer {
+  background: #000;
+  display: none;
+  bottom: 0;
+  left: 0;
+  opacity: 0.6;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+@media only screen and (min-height: 900px) {
+  nav, .small_screen_menu {
+    position: fixed;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .links {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .dropdown {
+    grid-auto-rows: -webkit-min-content;
+    grid-auto-rows: min-content;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -ms-grid-rows: unset;
+        grid-template-rows: unset;
+    height: 100%;
+    overflow: scroll;
+    padding: 4px;
+    row-gap: 6px;
+    text-align: left;
+  }
+  .dropdown > a {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 920px) {
+  :root {
+    --main-links-transform-down:0 {}
+    --small-screen-links-horizontal-gap:0px {} ;
+  }
+  nav {
+    -ms-grid-columns: 750px auto 75px;
+        grid-template-columns: 750px auto 75px;
+  }
+  .links {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-columns: (auto)[5];
+        grid-template-columns: repeat(5, auto);
+    height: 3em !important;
+    overflow: visible;
+    position: relative;
+    top: 0;
+  }
+  .links > a {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-grid-row: 1 !important;
+    grid-row: 1 !important;
+    height: 3em;
+  }
+  #start {
+    margin-left: 20px;
+  }
+  .dropdown {
+    grid-auto-flow: row;
+    -ms-grid-rows: (auto)[auto-fill];
+        grid-template-rows: repeat(auto-fill, auto);
+    height: auto;
+    max-width: 400px;
+    position: absolute;
+    row-gap: 25px;
+    top: 3em;
+    width: unset;
+  }
+  #start_more {
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+  #time_planning_more {
+    -ms-grid-column: 2;
+    grid-column: 2;
+  }
+  #courses_more {
+    -ms-grid-column: 3;
+    grid-column: 3;
+  }
+  #education_more {
+    -ms-grid-column: 4;
+    grid-column: 4;
+  }
+  #attendance_more {
+    -ms-grid-column: 5;
+    grid-column: 5;
+  }
+  #other_more {
+    -ms-grid-column: 6;
+    grid-column: 6;
+  }
+  .spacing_nav_div {
+    display: block;
+  }
+  .logo {
+    -ms-grid-column: 3;
+    grid-column: 3;
+  }
+  .menu_dropdown_button {
+    display: none;
+  }
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: green;
+}
+/*# sourceMappingURL=theme.css.map */

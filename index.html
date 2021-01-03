@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/theme.css">
 </head>
 <body>
     <nav>
@@ -29,6 +30,7 @@
         <label for=hidden_menu_checkbox class="menu_dropdown_button">
             <img src="img/open-menu.svg" alt="open menu button" height="30" width="30"/>
         </label>
+        <div id="dimmer" onclick="onDimmerClicked()"></div>
     </nav>
     <main>
         <section class="productSection">
@@ -52,5 +54,7 @@
             </div>
         </section>
     </main>
+
+    <script src="scripts/nav.js"></script>
 </body>
 </html>
