@@ -10,6 +10,24 @@ a {
   color: green;
 }
 
+.textContainer {
+  padding: 2em;
+  margin: 0 auto;
+  font-size: 1.1em;
+  line-height: 1.4em;
+  max-width: 40em;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  -webkit-column-gap: 2em;
+          column-gap: 2em;
+}
+
+.verticalLine {
+  border-left: 0.1em solid green;
+  height: 100%;
+}
+
 nav {
   background-color: green;
   -webkit-box-shadow: 0 2px 3px pink;
@@ -317,6 +335,9 @@ nav * {
   -ms-grid-columns: auto;
       grid-template-columns: auto;
   width: 100%;
+  -webkit-column-gap: 1em;
+          column-gap: 1em;
+  row-gap: 1em;
 }
 
 @media screen and (min-width: 40em) {
@@ -328,5 +349,45 @@ nav * {
 
 .productDiv {
   text-align: center;
+  height: 16em;
+  background-color: blue;
+}
+
+.aboutSection {
+  margin: 1em;
+}
+
+.founders {
+  margin: 1em;
+}
+
+.founder {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: 16em auto;
+      grid-template-rows: 16em auto;
+  -webkit-column-gap: 2em;
+          column-gap: 2em;
+}
+
+@media screen and (min-width: 45em) {
+  .founder {
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+  }
+  .founder img {
+    margin: 2em;
+  }
+}
+
+.founder img {
+  height: 100%;
+  width: 70%;
+  margin: 2em auto;
+  background-color: red;
 }
 /*# sourceMappingURL=theme.css.map */

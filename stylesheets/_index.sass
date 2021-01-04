@@ -5,10 +5,39 @@
     background-color: red
     grid-template-columns: auto
     width: 100%
+    column-gap: 1em
+    row-gap: 1em
 
     @media screen and ( min-width: 40em)
         grid-template-columns: auto auto
-
 .productDiv
     text-align: center 
+    height: 16em
+    background-color: blue
+
+
+.aboutSection
+    margin: 1em
+.founders
+    margin: 1em
+    
+.founder
+    display: grid
+    grid-template-columns: auto
+    grid-template-rows: 16em auto
+    column-gap: 2em
+
+    @media screen and ( min-width: 45em)
+        grid-template-columns:  1fr 2fr
+        grid-template-rows: auto
+
+        img
+            margin: 2em
+        
+
+    img
+        height: 100%
+        width: 70%
+        margin: 2em auto
+        background-color: red
         
