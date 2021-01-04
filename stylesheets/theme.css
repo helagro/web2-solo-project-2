@@ -372,6 +372,13 @@ nav * {
           column-gap: 2em;
 }
 
+.founder img {
+  height: 100%;
+  width: 70%;
+  margin: 2em auto;
+  background-color: red;
+}
+
 @media screen and (min-width: 45em) {
   .founder {
     -ms-grid-columns: 1fr 2fr;
@@ -381,13 +388,7 @@ nav * {
   }
   .founder img {
     margin: 2em;
+    width: 100%;
   }
-}
-
-.founder img {
-  height: 100%;
-  width: 70%;
-  margin: 2em auto;
-  background-color: red;
 }
 /*# sourceMappingURL=theme.css.map */
