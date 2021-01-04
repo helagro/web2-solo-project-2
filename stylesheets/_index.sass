@@ -1,4 +1,10 @@
 
+main
+    margin: 5%
+    max-width: 75em
+
+
+//ANCHOR products
 .productsGrid
     display: grid
     height: fit-content
@@ -15,29 +21,50 @@
     height: 16em
     background-color: blue
 
-
-.aboutSection
-    margin: 1em
-.founders
-    margin: 1em
     
+//ANCHOR about
+.aboutCompany
+    margin: 6em 0
+
 .founder
     display: grid
     grid-template-columns: auto
     grid-template-rows: 16em auto
-    column-gap: 2em
 
     img
         height: 100%
         width: 70%
         margin: 2em auto
         background-color: red
+        grid-row: 1
 
     @media screen and ( min-width: 45em)
-        grid-template-columns:  1fr 2fr
+        grid-template-columns:  1fr 1fr 1fr
         grid-template-rows: auto
 
         img
-            margin: 2em
+            margin: 0
+            grid-row: unset
             width: 100%
+
+        .textContainer
+            grid-column: span 2
+        
+
+//ANCHOR conntacts
+.contactSection
+    margin: 9em 0
+.contactInfoContainer
+    max-width: 45em
+    margin: auto
+    display: grid
+    background-color: orange
+    grid-template-columns: auto auto
+    row-gap: 2em
+    text-align: center
+    font-size: 1.3em
+
+    @media screen and ( min-width: 28em)
+        grid-template-columns: auto auto auto
+        
         

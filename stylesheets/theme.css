@@ -325,6 +325,11 @@ nav * {
   }
 }
 
+main {
+  margin: 5%;
+  max-width: 75em;
+}
+
 .productsGrid {
   display: -ms-grid;
   display: grid;
@@ -353,12 +358,8 @@ nav * {
   background-color: blue;
 }
 
-.aboutSection {
-  margin: 1em;
-}
-
-.founders {
-  margin: 1em;
+.aboutCompany {
+  margin: 6em 0;
 }
 
 .founder {
@@ -368,8 +369,6 @@ nav * {
       grid-template-columns: auto;
   -ms-grid-rows: 16em auto;
       grid-template-rows: 16em auto;
-  -webkit-column-gap: 2em;
-          column-gap: 2em;
 }
 
 .founder img {
@@ -377,18 +376,48 @@ nav * {
   width: 70%;
   margin: 2em auto;
   background-color: red;
+  -ms-grid-row: 1;
+  grid-row: 1;
 }
 
 @media screen and (min-width: 45em) {
   .founder {
-    -ms-grid-columns: 1fr 2fr;
-        grid-template-columns: 1fr 2fr;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     -ms-grid-rows: auto;
         grid-template-rows: auto;
   }
   .founder img {
-    margin: 2em;
+    margin: 0;
+    grid-row: unset;
     width: 100%;
+  }
+  .founder .textContainer {
+    grid-column: span 2;
+  }
+}
+
+.contactSection {
+  margin: 9em 0;
+}
+
+.contactInfoContainer {
+  max-width: 45em;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  background-color: orange;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  row-gap: 2em;
+  text-align: center;
+  font-size: 1.3em;
+}
+
+@media screen and (min-width: 28em) {
+  .contactInfoContainer {
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
   }
 }
 /*# sourceMappingURL=theme.css.map */
