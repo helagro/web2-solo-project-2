@@ -1,5 +1,14 @@
 
 .productsGrid
     display: grid
-    height: 70px
+    height: fit-content
     background-color: red
+    grid-template-columns: auto
+    width: 100%
+
+    @media screen and ( min-width: 40em)
+        grid-template-columns: auto auto
+
+.productDiv
+    text-align: center 
+        

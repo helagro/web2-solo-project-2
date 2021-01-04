@@ -2,6 +2,10 @@ body {
   margin: 0;
 }
 
+main {
+  margin-top: 3em;
+}
+
 a {
   color: green;
 }
@@ -306,7 +310,23 @@ nav * {
 .productsGrid {
   display: -ms-grid;
   display: grid;
-  height: 70px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: red;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  width: 100%;
+}
+
+@media screen and (min-width: 40em) {
+  .productsGrid {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+  }
+}
+
+.productDiv {
+  text-align: center;
 }
 /*# sourceMappingURL=theme.css.map */
