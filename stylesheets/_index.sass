@@ -1,13 +1,14 @@
 
 $product-space-size: 1em
+$section-padding: 7%
 
 section
-    margin: 7% 7%
+    padding: $section-padding
 
 
 //ANCHOR products
 .productSection
-    margin: ($product-space-size + $nav-height) 0 7% 0
+    padding: $product-space-size
 
 .productsGrid
     display: grid
@@ -16,19 +17,29 @@ section
     grid-template-columns: auto
     column-gap: $product-space-size
     row-gap: $product-space-size
-    margin: 0 $product-space-size
 
     @media screen and ( min-width: 40em)
         grid-template-columns: auto auto
 .productDiv
-    text-align: center 
+    text-align: center
     height: 19em
     background-color: blue
 
     
 //ANCHOR about
-.aboutCompany
-    margin: 6em 0
+
+.aboutSection
+    background-color: #444
+
+.aboutCompanyTextContainer
+    @extend .textContainer
+    grid-template-columns: auto
+    grid-auto-flow: unset
+    border-left: 2px solid black
+
+    @media screen and ( min-width: 50em)
+        grid-auto-flow: column
+        
 
 .founders
     display: grid
@@ -41,7 +52,7 @@ section
     img
         height: 100%
         width: 70%
-        margin: 2em auto
+        margin: 0 auto
         background-color: red
         grid-row: 1
 
@@ -60,14 +71,14 @@ section
 
 //ANCHOR conntacts
 .contactSection
-    margin: 9em 0
+    background-color: #aaaaaa
 .contactInfoContainer
-    max-width: 45em
+    max-width: 40em
     margin: auto
     display: grid
     background-color: orange
     grid-template-columns: auto auto
-    row-gap: 2em
+    row-gap: 1em
     text-align: center
     font-size: 1.3em
 

@@ -10,8 +10,8 @@ a {
   color: green;
 }
 
-.textContainer {
-  padding: 2em;
+.textContainer, .aboutCompanyTextContainer {
+  padding: 0.5em 2em;
   margin: 0 auto;
   font-size: 1.1em;
   line-height: 1.4em;
@@ -326,11 +326,11 @@ nav * {
 }
 
 section {
-  margin: 7% 7%;
+  padding: 7%;
 }
 
 .productSection {
-  margin: 4em 0 7% 0;
+  padding: 1em;
 }
 
 .productsGrid {
@@ -345,7 +345,6 @@ section {
   -webkit-column-gap: 1em;
           column-gap: 1em;
   row-gap: 1em;
-  margin: 0 1em;
 }
 
 @media screen and (min-width: 40em) {
@@ -361,8 +360,21 @@ section {
   background-color: blue;
 }
 
-.aboutCompany {
-  margin: 6em 0;
+.aboutSection {
+  background-color: #444;
+}
+
+.aboutCompanyTextContainer {
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  grid-auto-flow: unset;
+  border-left: 2px solid black;
+}
+
+@media screen and (min-width: 50em) {
+  .aboutCompanyTextContainer {
+    grid-auto-flow: column;
+  }
 }
 
 .founders {
@@ -383,7 +395,7 @@ section {
 .founder img {
   height: 100%;
   width: 70%;
-  margin: 2em auto;
+  margin: 0 auto;
   background-color: red;
   -ms-grid-row: 1;
   grid-row: 1;
@@ -401,24 +413,24 @@ section {
     grid-row: unset;
     width: 100%;
   }
-  .founder .textContainer {
+  .founder .textContainer, .founder .aboutCompanyTextContainer {
     grid-column: span 2;
   }
 }
 
 .contactSection {
-  margin: 9em 0;
+  background-color: #aaaaaa;
 }
 
 .contactInfoContainer {
-  max-width: 45em;
+  max-width: 40em;
   margin: auto;
   display: -ms-grid;
   display: grid;
   background-color: orange;
   -ms-grid-columns: auto auto;
       grid-template-columns: auto auto;
-  row-gap: 2em;
+  row-gap: 1em;
   text-align: center;
   font-size: 1.3em;
 }
