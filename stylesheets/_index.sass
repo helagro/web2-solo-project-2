@@ -1,24 +1,28 @@
 
-main
-    margin: 5%
-    max-width: 75em
+$product-space-size: 1em
+
+section
+    margin: 7% 7%
 
 
 //ANCHOR products
+.productSection
+    margin: ($product-space-size + $nav-height) 0 7% 0
+
 .productsGrid
     display: grid
     height: fit-content
     background-color: red
     grid-template-columns: auto
-    width: 100%
-    column-gap: 1em
-    row-gap: 1em
+    column-gap: $product-space-size
+    row-gap: $product-space-size
+    margin: 0 $product-space-size
 
     @media screen and ( min-width: 40em)
         grid-template-columns: auto auto
 .productDiv
     text-align: center 
-    height: 16em
+    height: 19em
     background-color: blue
 
     
@@ -26,6 +30,9 @@ main
 .aboutCompany
     margin: 6em 0
 
+.founders
+    display: grid
+    row-gap: 2em
 .founder
     display: grid
     grid-template-columns: auto
@@ -64,7 +71,7 @@ main
     text-align: center
     font-size: 1.3em
 
-    @media screen and ( min-width: 28em)
+    @media screen and ( min-width: 50em)
         grid-template-columns: auto auto auto
         
         
