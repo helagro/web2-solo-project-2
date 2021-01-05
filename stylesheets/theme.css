@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
 }
@@ -394,7 +398,7 @@ section {
 
 .founder img {
   height: 100%;
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   background-color: red;
   -ms-grid-row: 1;

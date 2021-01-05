@@ -16,9 +16,10 @@
 
         <label for="hidden_menu_checkbox" class="links">
             <a href="index.html" ontouchstart="return onNavTouch(event)" id="start">Start</a>
-            <a href="index.html" ontouchstart="return onNavTouch(event)" id="products">Products</a>
-            <a href="index.html" ontouchstart="return onNavTouch(event)" id="about">About</a>
-            <a href="index.html" ontouchstart="return onNavTouch(event)" id="contact">Contact</a>
+            <a href="#productSection" ontouchstart="return onNavTouch(event)" id="products">Products</a>
+            <a href="#aboutSection" ontouchstart="return onNavTouch(event)" id="about">About</a>
+            <a href="#foundersSection" ontouchstart="return onNavTouch(event)" id="founders">Founders</a>
+            <a href="#contactSection" ontouchstart="return onNavTouch(event)" id="contact">Contact</a>
 
             <div class="dropdown" id="products_more">
                 <a>Uppgifter och resultat</a>
@@ -36,7 +37,7 @@
     </nav>
     <div id="dimmer" onclick="onDimmerClicked()"></div>
     <main>
-        <section class="productSection">
+        <section class="productSection" id="productSection">
             <div class="productsGrid">
                 <div class="productDiv">
                     <h2 class="productTitle">Product</h2>
@@ -56,7 +57,7 @@
                 </div>     
             </div>
         </section>
-        <section class="aboutSection">
+        <section class="aboutSection" id="aboutSection">
             <div class="aboutCompany">
                 <div class="aboutCompanyTextContainer">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae suscipit nisi, vel pretium metus. Fusce consectetur nisi id est pharetra dictum. Etiam id dapibus diam. Suspendisse et velit id nunc sodales maximus vitae non erat. Nulla hendrerit diam ac vestibulum sollicitudin. Aenean blandit tortor vitae erat consequat posuere. Proin ligula est, efficitur sit amet tristique in, rhoncus et erat. Sed nisi sem, finibus a est ut, vulputate finibus nulla. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
@@ -65,7 +66,7 @@
                 </div>
             </div>
         </section>
-        <section class="foundersSection">
+        <section class="foundersSection" id="foundersSection">
             <div class="founders">
                 <div class="founder">
                     <img class="founderImg">
@@ -87,7 +88,7 @@
                 </div>
             </div>
         </section>
-        <section class="contactSection">
+        <section class="contactSection" id="contactSection">
             <div class="contactInfoContainer">
                 <p>diwahdw dwaiduw fueui</p>
                 <p>diwahdw dwaiduw fueui</p>
