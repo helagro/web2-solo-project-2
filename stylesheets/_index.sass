@@ -20,10 +20,20 @@ section
 
     @media screen and ( min-width: 40em)
         grid-template-columns: auto auto
-.productDiv
+         
+
+[class^="productDiv"],
+[class*=" productDiv"]
     text-align: center
     height: 19em
-    background-color: blue
+
+    h2
+        z-index: 2
+
+    &--fridge
+        background: url("/img/fridge.png")
+        background-color: #fff
+        
 
     
 //ANCHOR about
@@ -44,6 +54,8 @@ section
 .founders
     display: grid
     row-gap: 2em
+    max-width: 75em
+    margin: auto
 .founder
     display: grid
     grid-template-columns: auto

@@ -358,10 +358,21 @@ section {
   }
 }
 
-.productDiv {
+[class^="productDiv"],
+[class*=" productDiv"] {
   text-align: center;
   height: 19em;
-  background-color: blue;
+}
+
+[class^="productDiv"] h2,
+[class*=" productDiv"] h2 {
+  z-index: 2;
+}
+
+[class^="productDiv"]--fridge,
+[class*=" productDiv"]--fridge {
+  background: url("/img/fridge.png");
+  background-color: #fff;
 }
 
 .aboutSection {
@@ -385,6 +396,8 @@ section {
   display: -ms-grid;
   display: grid;
   row-gap: 2em;
+  max-width: 75em;
+  margin: auto;
 }
 
 .founder {
