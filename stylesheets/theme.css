@@ -358,21 +358,30 @@ section {
   }
 }
 
-[class^="productDiv"],
-[class*=" productDiv"] {
+.productDiv {
   text-align: center;
-  height: 19em;
+  height: 29em;
+  background-color: #fff;
 }
 
-[class^="productDiv"] h2,
-[class*=" productDiv"] h2 {
+.productDiv h2 {
   z-index: 2;
 }
 
-[class^="productDiv"]--fridge,
-[class*=" productDiv"]--fridge {
-  background: url("/img/fridge.png");
-  background-color: #fff;
+.productDiv.buds {
+  background-image: url("/img/buds.png");
+}
+
+.productDiv.phone {
+  background-image: url("/img/a425g.png");
+}
+
+.productDiv.phone-backside {
+  background-image: url("/img/phone-backside.png");
+}
+
+.productDiv.fridge {
+  background-image: url("/img/fridge.png");
 }
 
 .aboutSection {
