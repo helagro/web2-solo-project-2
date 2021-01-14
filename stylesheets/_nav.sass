@@ -1,3 +1,8 @@
+$main-links-transform-down: 30%
+$nav-background: green
+$big-text-color: #585858
+  
+  
 nav
   background-color: $nav-background
   box-shadow: 0 2px 3px $shadow-color
@@ -48,10 +53,10 @@ nav
   z-index: 3
 
   > a
-    color: var(--big-text-color)
+    color: var($big-text-color)
     font-size: 18px
     font-weight: 200
-    padding-right: var(--small-screen-links-horizontal-gap)
+    padding-right: var($small-screen-links-horizontal-gap)
     text-align: right
     text-decoration: none
 
@@ -87,20 +92,15 @@ nav
 .dropdown:hover, #products:hover ~ #products_more
   display: grid !important
 
-#time_planning
+#products
   grid-row: 2
 
-#courses
+#about
   grid-row: 3
 
-#education
+#contact
   grid-row: 4
 
-#attendance
-  grid-row: 5
-
-#other
-  grid-row: 6
 
 .spacing_nav_div
   display: none
@@ -150,9 +150,8 @@ nav
       font-size: 18px
 
 @media only screen and (min-width: 920px)
-  \:root
-    --main-links-transform-down:0
-    --small-screen-links-horizontal-gap:0px
+  $main-links-transform-down:0
+  $small-screen-links-horizontal-gap:0px
 
   nav
     grid-template-columns: 750px auto 75px
@@ -184,24 +183,6 @@ nav
     row-gap: 25px
     top: $nav-height
     width: unset
-
-  #start_more
-    grid-column: 1
-
-  #time_planning_more
-    grid-column: 2
-
-  #courses_more
-    grid-column: 3
-
-  #education_more
-    grid-column: 4
-
-  #attendance_more
-    grid-column: 5
-
-  #other_more
-    grid-column: 6
 
   .spacing_nav_div
     display: block

@@ -261,7 +261,6 @@ nav * {
             box-shadow: none;
     -ms-grid-row: 1;
     grid-row: 1;
-    -ms-grid-columns: (auto)[5];
         grid-template-columns: repeat(5, auto);
     height: 3em !important;
     overflow: visible;
@@ -335,6 +334,7 @@ section {
 
 .productSection {
   padding: 1em;
+  background-color: #fff;
 }
 
 .productsGrid {
@@ -343,7 +343,7 @@ section {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  background-color: red;
+  background-color: #fff;
   -ms-grid-columns: auto;
       grid-template-columns: auto;
   grid-auto-rows: 70vw;
@@ -362,12 +362,13 @@ section {
 
 .productDiv {
   text-align: center;
-  background-color: #faf;
+  background-color: #f9f9f9;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   position: relative;
   background-origin: content-box;
-  padding: 6em;
+  padding: 7em;
+  background-position: center;
 }
 
 .productDiv h2 {

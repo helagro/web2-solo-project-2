@@ -1,5 +1,6 @@
 
 $product-space-size: 1em
+$product-space-color: #fff
 $section-padding: 7%
 
 section
@@ -9,11 +10,12 @@ section
 //ANCHOR products
 .productSection
     padding: $product-space-size
+    background-color: $product-space-color
 
 .productsGrid
     display: grid
     height: fit-content
-    background-color: red
+    background-color: $product-space-color
     grid-template-columns: auto
     grid-auto-rows: 70vw
     column-gap: $product-space-size
@@ -26,12 +28,13 @@ section
 
 .productDiv
     text-align: center
-    background-color: #faf
+    background-color: #f9f9f9
     background-repeat: no-repeat
-    background-size: cover
+    background-size: contain
     position: relative
     background-origin: content-box
-    padding: 6em
+    padding: 7em
+    background-position: center
 
     h2
         z-index: 2
