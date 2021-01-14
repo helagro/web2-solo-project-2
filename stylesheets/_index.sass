@@ -15,20 +15,37 @@ section
     height: fit-content
     background-color: red
     grid-template-columns: auto
+    grid-auto-rows: 70vw
     column-gap: $product-space-size
     row-gap: $product-space-size
 
-    @media screen and ( min-width: 40em)
+    @media screen and ( min-width: 68em)
         grid-template-columns: auto auto
+        grid-auto-rows: 35vw
          
 
 .productDiv
     text-align: center
-    height: 29em
-    background-color: #fff
+    background-color: #faf
+    background-repeat: no-repeat
+    background-size: cover
+    position: relative
+    background-origin: content-box
+    padding: 6em
 
     h2
         z-index: 2
+
+    .coveringProductLink
+        position: absolute
+        @include position(0)
+
+    .productText
+        position: absolute
+        z-index: 3
+        left: 50%
+        top: 3%
+        transform: translate(-50%, 0)
 
     &.buds
         background-image: url("/img/buds.png")
@@ -54,14 +71,14 @@ section
 .aboutSection
     background-color: #444
 
-.aboutCompanyTextContainer
-    @extend .textContainer
-    grid-template-columns: auto
-    grid-auto-flow: unset
-    border-left: 2px solid black
+    .aboutCompanyTextContainer
+        @extend .textContainer
+        grid-template-columns: auto
+        grid-auto-flow: unset
+        border-left: 2px solid black
 
-    @media screen and ( min-width: 50em)
-        grid-auto-flow: column
+        @media screen and ( min-width: 50em)
+            grid-auto-flow: column
         
 
 .founders

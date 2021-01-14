@@ -14,7 +14,7 @@ a {
   color: green;
 }
 
-.textContainer, .aboutCompanyTextContainer {
+.textContainer, .aboutSection .aboutCompanyTextContainer {
   padding: 0.5em 2em;
   margin: 0 auto;
   font-size: 1.1em;
@@ -346,26 +346,49 @@ section {
   background-color: red;
   -ms-grid-columns: auto;
       grid-template-columns: auto;
+  grid-auto-rows: 70vw;
   -webkit-column-gap: 1em;
           column-gap: 1em;
   row-gap: 1em;
 }
 
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 68em) {
   .productsGrid {
     -ms-grid-columns: auto auto;
         grid-template-columns: auto auto;
+    grid-auto-rows: 35vw;
   }
 }
 
 .productDiv {
   text-align: center;
-  height: 29em;
-  background-color: #fff;
+  background-color: #faf;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-origin: content-box;
+  padding: 6em;
 }
 
 .productDiv h2 {
   z-index: 2;
+}
+
+.productDiv .coveringProductLink {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.productDiv .productText {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  top: 3%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 
 .productDiv.buds {
@@ -388,7 +411,7 @@ section {
   background-color: #444;
 }
 
-.aboutCompanyTextContainer {
+.aboutSection .aboutCompanyTextContainer {
   -ms-grid-columns: auto;
       grid-template-columns: auto;
   grid-auto-flow: unset;
@@ -396,7 +419,7 @@ section {
 }
 
 @media screen and (min-width: 50em) {
-  .aboutCompanyTextContainer {
+  .aboutSection .aboutCompanyTextContainer {
     grid-auto-flow: column;
   }
 }
@@ -439,7 +462,7 @@ section {
     grid-row: unset;
     width: 100%;
   }
-  .founder .textContainer, .founder .aboutCompanyTextContainer {
+  .founder .textContainer, .founder .aboutSection .aboutCompanyTextContainer, .aboutSection .founder .aboutCompanyTextContainer {
     grid-column: span 2;
   }
 }
