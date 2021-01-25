@@ -11,14 +11,14 @@ main {
 }
 
 a {
-  color: green;
+  color: red;
 }
 
 .textContainer, .aboutSection .aboutCompanyTextContainer {
   padding: 0.5em 2em;
   margin: 0 auto;
   font-size: 1.1em;
-  line-height: 1.4em;
+  line-height: 1.6em;
   max-width: 40em;
   display: -ms-grid;
   display: grid;
@@ -109,10 +109,10 @@ nav * {
 }
 
 .links > a {
-  color: var(--big-text-color);
+  color: var(#585858);
   font-size: 18px;
   font-weight: 200;
-  padding-right: var(--small-screen-links-horizontal-gap);
+  padding-right: var(1.3em);
   text-align: right;
   text-decoration: none;
 }
@@ -161,29 +161,24 @@ nav * {
   display: grid !important;
 }
 
-#time_planning {
+#products {
   -ms-grid-row: 2;
   grid-row: 2;
 }
 
-#courses {
+#about {
   -ms-grid-row: 3;
   grid-row: 3;
 }
 
-#education {
+#founders {
   -ms-grid-row: 4;
   grid-row: 4;
 }
 
-#attendance {
+#contact {
   -ms-grid-row: 5;
   grid-row: 5;
-}
-
-#other {
-  -ms-grid-row: 6;
-  grid-row: 6;
 }
 
 .spacing_nav_div {
@@ -247,11 +242,7 @@ nav * {
   }
 }
 
-@media only screen and (min-width: 920px) {
-  :root {
-    --main-links-transform-down:0 {}
-    --small-screen-links-horizontal-gap:0px {} ;
-  }
+@media (min-width: 920px) {
   nav {
     -ms-grid-columns: 750px auto 75px;
         grid-template-columns: 750px auto 75px;
@@ -261,6 +252,7 @@ nav * {
             box-shadow: none;
     -ms-grid-row: 1;
     grid-row: 1;
+    -ms-grid-columns: (auto)[5];
         grid-template-columns: repeat(5, auto);
     height: 3em !important;
     overflow: visible;
@@ -291,30 +283,6 @@ nav * {
     row-gap: 25px;
     top: 3em;
     width: unset;
-  }
-  #start_more {
-    -ms-grid-column: 1;
-    grid-column: 1;
-  }
-  #time_planning_more {
-    -ms-grid-column: 2;
-    grid-column: 2;
-  }
-  #courses_more {
-    -ms-grid-column: 3;
-    grid-column: 3;
-  }
-  #education_more {
-    -ms-grid-column: 4;
-    grid-column: 4;
-  }
-  #attendance_more {
-    -ms-grid-column: 5;
-    grid-column: 5;
-  }
-  #other_more {
-    -ms-grid-column: 6;
-    grid-column: 6;
   }
   .spacing_nav_div {
     display: block;
@@ -416,12 +384,20 @@ section {
   -ms-grid-columns: auto;
       grid-template-columns: auto;
   grid-auto-flow: unset;
-  border-left: 2px solid black;
+  border-left: 2px solid #ffffff;
+  margin: 6vw auto;
+  color: #fff;
 }
 
 @media screen and (min-width: 50em) {
   .aboutSection .aboutCompanyTextContainer {
     grid-auto-flow: column;
+  }
+}
+
+@media screen and (min-width: 56em) {
+  .aboutSection .aboutCompanyTextContainer {
+    margin: 3.4em auto;
   }
 }
 
@@ -451,7 +427,7 @@ section {
   grid-row: 1;
 }
 
-@media screen and (min-width: 45em) {
+@media screen and (min-width: 55em) {
   .founder {
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
