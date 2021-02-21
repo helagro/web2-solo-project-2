@@ -1,6 +1,6 @@
 $main-links-transform-down: 30%
-$nav-background: green
-$big-text-color: #585858
+$nav-background: $dark1
+$big-text-color: $light1
 $small-screen-links-horizontal-gap: 1.3em
   
   
@@ -38,7 +38,6 @@ nav
   display: flex
 
 .links
-  align-items: stretch
   background-color: $nav-background
   box-shadow: 0 2px 3px $shadow-color
   display: grid
@@ -54,18 +53,18 @@ nav
   z-index: 3
 
   > a
-    color: var($big-text-color)
+    color: $big-text-color
     font-size: 18px
     font-weight: 200
-    padding-right: var($small-screen-links-horizontal-gap)
+    padding-right: $small-screen-links-horizontal-gap
     text-align: right
     text-decoration: none
+    height: ($smallscreen-dropdown-height - $nav-height + 3) / 5 !important
 
   a:hover
     text-decoration: underline
 
 .dropdown
-  background-color: var(--weak-green)
   border: 1px solid $border-color
   box-sizing: border-box
   column-gap: 15px

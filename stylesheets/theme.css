@@ -10,10 +10,6 @@ main {
   margin-top: 3em;
 }
 
-a {
-  color: red;
-}
-
 .textContainer, .aboutSection .aboutCompanyTextContainer {
   padding: 0.5em 2em;
   margin: 0 auto;
@@ -33,7 +29,7 @@ a {
 }
 
 nav {
-  background-color: green;
+  background-color: #444;
   -webkit-box-shadow: 0 2px 3px pink;
           box-shadow: 0 2px 3px pink;
   display: -ms-grid;
@@ -85,10 +81,7 @@ nav * {
 }
 
 .links {
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  background-color: green;
+  background-color: #444;
   -webkit-box-shadow: 0 2px 3px pink;
           box-shadow: 0 2px 3px pink;
   display: -ms-grid;
@@ -109,12 +102,13 @@ nav * {
 }
 
 .links > a {
-  color: var(#585858);
+  color: #eee;
   font-size: 18px;
   font-weight: 200;
-  padding-right: var(1.3em);
+  padding-right: 1.3em;
   text-align: right;
   text-decoration: none;
+  height: 2.5em !important;
 }
 
 .links a:hover {
@@ -122,7 +116,6 @@ nav * {
 }
 
 .dropdown {
-  background-color: var(--weak-green);
   border: 1px solid yellow;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -384,9 +377,9 @@ section {
   -ms-grid-columns: auto;
       grid-template-columns: auto;
   grid-auto-flow: unset;
-  border-left: 2px solid #ffffff;
+  border-left: 2px solid #eee;
   margin: 6vw auto;
-  color: #fff;
+  color: #eee;
 }
 
 @media screen and (min-width: 50em) {
@@ -399,6 +392,11 @@ section {
   .aboutSection .aboutCompanyTextContainer {
     margin: 3.4em auto;
   }
+}
+
+.foundersSection {
+  background-color: #eee;
+  color: #444;
 }
 
 .founders {
@@ -426,6 +424,8 @@ section {
   -ms-grid-row: 1;
   grid-row: 1;
   max-width: 20em;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media screen and (min-width: 55em) {
@@ -446,20 +446,24 @@ section {
 }
 
 .contactSection {
-  background-color: #aaaaaa;
+  background-color: #333;
+  padding: 3%;
 }
 
 .contactInfoContainer {
-  max-width: 40em;
+  max-width: 35em;
   margin: auto;
   display: -ms-grid;
   display: grid;
-  background-color: orange;
   -ms-grid-columns: auto auto;
       grid-template-columns: auto auto;
   row-gap: 1em;
   text-align: center;
-  font-size: 1.3em;
+  font-size: 1.1em;
+}
+
+.contactInfoContainer > a {
+  color: #eee;
 }
 
 @media screen and (min-width: 50em) {

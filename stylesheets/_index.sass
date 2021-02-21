@@ -72,15 +72,15 @@ section
 //ANCHOR about
 
 .aboutSection
-    background-color: #444
+    background-color: $dark1
 
     .aboutCompanyTextContainer
         @extend .textContainer
         grid-template-columns: auto
         grid-auto-flow: unset
-        border-left: 2px solid #ffffff
+        border-left: 2px solid $light1
         margin: 6vw auto
-        color: #fff
+        color: $light1
 
         @media screen and ( min-width: 50em)
             grid-auto-flow: column
@@ -88,7 +88,9 @@ section
         @media screen and ( min-width: 56em)
             margin: 3.4em auto
         
-
+.foundersSection
+    background-color: $light1
+    color: $dark1
 .founders
     display: grid
     row-gap: 2em
@@ -106,6 +108,7 @@ section
         background-color: red
         grid-row: 1
         max-width: 20em
+        object-fit: cover
 
     @media screen and ( min-width: 55em)
         grid-template-columns:  1fr 1fr 1fr
@@ -122,16 +125,20 @@ section
 
 //ANCHOR conntacts
 .contactSection
-    background-color: #aaaaaa
+    background-color: $dark2
+    padding: 3%
+
 .contactInfoContainer
-    max-width: 40em
+    max-width: 35em
     margin: auto
     display: grid
-    background-color: orange
     grid-template-columns: auto auto
     row-gap: 1em
     text-align: center
-    font-size: 1.3em
+    font-size: 1.1em
+
+    > a 
+        color: $light1
 
     @media screen and ( min-width: 50em)
         grid-template-columns: auto auto auto
