@@ -56,18 +56,17 @@ nav
 
   > a
     color: $big-text-color
-    font-size: 18px
-    font-weight: 800
+    font-size: 1em
+    font-weight: 100
     padding-right: $small-screen-links-horizontal-gap
     text-align: right
     text-decoration: none
-    height: ($smallscreen-dropdown-height - $nav-height + 3) / 5 !important
+    height: ($smallscreen-dropdown-height - $nav-height + 3) / 5
 
   a:hover
-    text-decoration: underline
+    opacity: 0.4
 
 .dropdown
-  border: 1px solid $border-color
   box-sizing: border-box
   column-gap: 15px
   display: none
@@ -79,12 +78,12 @@ nav
   overflow: auto
   padding: 20px
   row-gap: 15px
-  text-align: center
   width: 100%
+  background-color: $dark2
 
   > a
-    color: var(--medium-text-color)
-    font-size: 16px
+    color: $light1
+    font-size: 0.9em
     text-decoration: none
 
 .dropdown_main_link
@@ -175,7 +174,6 @@ nav
       display: flex
       grid-row: 1 !important
       height: $nav-height
-      margin-top: 0.1em
 
   #start
     margin-left: 20px

@@ -21,7 +21,7 @@ section
     column-gap: $product-space-size
     row-gap: $product-space-size
 
-    @media screen and ( min-width: 68em)
+    @media screen and ( min-width: 60em)
         grid-template-columns: auto auto
         grid-auto-rows: 35vw
          
@@ -33,7 +33,7 @@ section
     background-size: contain
     position: relative
     background-origin: content-box
-    padding: 7em
+    padding: 7em 7em 2em 7em
     background-position: center
 
     .coveringProductLink
@@ -44,23 +44,23 @@ section
         position: absolute
         z-index: 3
         left: 50%
-        top: 3%
+        top: 7%
         transform: translate(-50%, 0)
-        color: $dark2
         font-family: font1
 
         h2
             z-index: 2
             font-family: font1
-            font-weight: 300
+            font-weight: 200
             color: $dark1
             margin: 0
 
         .msg
             margin: 0.8em 0 0.4em 0 
+            color: $dark2
 
         a, a:visited
-            color: $dark1
+            color: $dark3
             margin: 0 0.2em
 
     &.buds
@@ -92,14 +92,14 @@ section
         grid-template-columns: auto
         grid-auto-flow: unset
         border-left: 2px solid $light1
-        margin: 6vw auto
+        margin: 2vw auto
         color: $light1
 
         @media screen and ( min-width: 50em)
             grid-auto-flow: column
 
         @media screen and ( min-width: 56em)
-            margin: 3.4em auto
+            margin: 0 auto
         
 .foundersSection
     background-color: $light1
