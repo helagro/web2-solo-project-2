@@ -1,10 +1,13 @@
 
 $product-space-size: 1em
 $product-space-color: #fff
-$section-padding: 7%
+$section-padding: 1%
 
 section
     padding: $section-padding
+    
+    @media screen and ( min-width: 36em )
+        padding: 7%
 
 
 //ANCHOR products
@@ -91,9 +94,11 @@ section
         @extend .textContainer
         grid-template-columns: auto
         grid-auto-flow: unset
-        border-left: 2px solid $light1
         margin: 2vw auto
         color: $light1
+
+        @media screen and ( min-width: 40em)
+            border-left: 2px solid $light1
 
         @media screen and ( min-width: 50em)
             grid-auto-flow: column
@@ -104,6 +109,7 @@ section
 .foundersSection
     background-color: $light1
     color: $dark1
+    padding-top: 7%
 .founders
     display: grid
     row-gap: 2em
@@ -128,7 +134,6 @@ section
         grid-template-rows: auto
 
         img
-            margin: 0
             grid-row: unset
             width: 100%
 
@@ -146,7 +151,6 @@ section
     margin: auto
     display: grid
     grid-template-columns: auto auto
-    row-gap: 1em
     text-align: center
     font-size: 1.1em
 
@@ -155,5 +159,6 @@ section
 
     @media screen and ( min-width: 50em)
         grid-template-columns: auto auto auto auto
+        row-gap: 1em
         
         

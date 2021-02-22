@@ -40,6 +40,9 @@ function onNavTouch(event){
     const id = target.id
     const dropdown = getRelevantDropdown(id)
 
+    if(!dropdown)
+        hideMenu()
+
     const replaced = replaceDropdown(dropdown, target)
     if(replaced)
         dimScreen(true)
@@ -108,6 +111,7 @@ function createDropdownHeaderLink(dropdown, link){
     const newLink = document.createElement("a")
     newLink.href = link.href
     newLink.innerHTML = link.innerHTML
+    newLink.onclick = hideMenu
     newLink.className = "dropdown_main_link"
     dropdown.insertBefore(newLink, dropdown.firstChild)
 }

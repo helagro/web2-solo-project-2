@@ -44,8 +44,6 @@ main {
 
 nav {
   background-color: #444;
-  -webkit-box-shadow: 0 2px 3px pink;
-          box-shadow: 0 2px 3px pink;
   display: -ms-grid;
   display: grid;
   font-family: font2;
@@ -99,8 +97,6 @@ nav * {
 
 .links {
   background-color: #444;
-  -webkit-box-shadow: 0 2px 3px pink;
-          box-shadow: 0 2px 3px pink;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 40% 60%;
@@ -257,8 +253,6 @@ nav * {
         grid-template-columns: 700px auto 75px;
   }
   .links {
-    -webkit-box-shadow: none;
-            box-shadow: none;
     -ms-grid-row: 1;
     grid-row: 1;
     -ms-grid-columns: (auto)[5];
@@ -306,7 +300,13 @@ nav * {
 }
 
 section {
-  padding: 7%;
+  padding: 1%;
+}
+
+@media screen and (min-width: 36em) {
+  section {
+    padding: 7%;
+  }
 }
 
 .productSection {
@@ -408,9 +408,14 @@ section {
   -ms-grid-columns: auto;
       grid-template-columns: auto;
   grid-auto-flow: unset;
-  border-left: 2px solid #eee;
   margin: 2vw auto;
   color: #eee;
+}
+
+@media screen and (min-width: 40em) {
+  .aboutSection .aboutCompanyTextContainer {
+    border-left: 2px solid #eee;
+  }
 }
 
 @media screen and (min-width: 50em) {
@@ -428,6 +433,7 @@ section {
 .foundersSection {
   background-color: #eee;
   color: #444;
+  padding-top: 7%;
 }
 
 .founders {
@@ -467,7 +473,6 @@ section {
         grid-template-rows: auto;
   }
   .founder img {
-    margin: 0;
     grid-row: unset;
     width: 100%;
   }
@@ -488,7 +493,6 @@ section {
   display: grid;
   -ms-grid-columns: auto auto;
       grid-template-columns: auto auto;
-  row-gap: 1em;
   text-align: center;
   font-size: 1.1em;
 }
@@ -501,6 +505,7 @@ section {
   .contactInfoContainer {
     -ms-grid-columns: auto auto auto auto;
         grid-template-columns: auto auto auto auto;
+    row-gap: 1em;
   }
 }
 /*# sourceMappingURL=theme.css.map */
