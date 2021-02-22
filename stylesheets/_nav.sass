@@ -8,7 +8,8 @@ nav
   background-color: $nav-background
   box-shadow: 0 2px 3px $shadow-color
   display: grid
-  font-family: 'Raleway', sans-serif
+  font-family: font2
+  letter-spacing: 0.07em
   grid-template-columns: 70px 70px
   height: $nav-height
   justify-content: space-between
@@ -36,6 +37,7 @@ nav
 
 .icon
   display: flex
+  object-fit: cover
 
 .links
   background-color: $nav-background
@@ -55,7 +57,7 @@ nav
   > a
     color: $big-text-color
     font-size: 18px
-    font-weight: 200
+    font-weight: 800
     padding-right: $small-screen-links-horizontal-gap
     text-align: right
     text-decoration: none
@@ -157,7 +159,7 @@ nav
   $small-screen-links-horizontal-gap: 0px
 
   nav
-    grid-template-columns: 750px auto 75px
+    grid-template-columns: 700px auto 75px
 
   .links
     box-shadow: none
@@ -173,6 +175,7 @@ nav
       display: flex
       grid-row: 1 !important
       height: $nav-height
+      margin-top: 0.1em
 
   #start
     margin-left: 20px

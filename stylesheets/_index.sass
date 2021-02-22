@@ -36,9 +36,6 @@ section
     padding: 7em
     background-position: center
 
-    h2
-        z-index: 2
-
     .coveringProductLink
         position: absolute
         @include position(0)
@@ -49,6 +46,22 @@ section
         left: 50%
         top: 3%
         transform: translate(-50%, 0)
+        color: $dark2
+        font-family: font1
+
+        h2
+            z-index: 2
+            font-family: font1
+            font-weight: 300
+            color: $dark1
+            margin: 0
+
+        .msg
+            margin: 0.8em 0 0.4em 0 
+
+        a, a:visited
+            color: $dark1
+            margin: 0 0.2em
 
     &.buds
         background-image: url("/img/buds.png")
@@ -141,6 +154,6 @@ section
         color: $light1
 
     @media screen and ( min-width: 50em)
-        grid-template-columns: auto auto auto
+        grid-template-columns: auto auto auto auto
         
         
