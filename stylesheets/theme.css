@@ -149,7 +149,7 @@ nav * {
   padding: 20px;
   row-gap: 15px;
   width: 100%;
-  background-color: #333;
+  background-color: #333333;
 }
 
 .dropdown > a {
@@ -169,23 +169,23 @@ nav * {
 }
 
 #products {
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+#about {
   -ms-grid-row: 2;
   grid-row: 2;
 }
 
-#about {
+#founders {
   -ms-grid-row: 3;
   grid-row: 3;
 }
 
-#founders {
+#contact {
   -ms-grid-row: 4;
   grid-row: 4;
-}
-
-#contact {
-  -ms-grid-row: 5;
-  grid-row: 5;
 }
 
 .spacing_nav_div {
@@ -275,8 +275,8 @@ nav * {
     grid-row: 1 !important;
     height: 3em;
   }
-  #start {
-    margin-left: 20px;
+  #products {
+    margin-left: 40px;
   }
   .dropdown {
     grid-auto-flow: row;
@@ -378,17 +378,19 @@ section {
 
 .productDiv .productText .msg {
   margin: 0.8em 0 0.4em 0;
-  color: #333;
+  color: #333333;
   font-size: 1.1em;
 }
 
 .productDiv .productText a, .productDiv .productText a:visited {
-  color: #888;
+  color: #777;
   margin: 0 0.2em;
 }
 
 .productDiv.buds {
   background-image: url("/img/buds.png");
+  background-size: 70%;
+  background-position-y: 10%;
 }
 
 .productDiv.phone {
@@ -485,7 +487,7 @@ section {
 }
 
 .contactSection {
-  background-color: #333;
+  background-color: #333333;
   padding: 3%;
 }
 
