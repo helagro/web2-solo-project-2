@@ -1,11 +1,13 @@
 @font-face {
   font-family: font1;
   src: url(/gotham.ttf);
+  font-display: swap;
 }
 
 @font-face {
   font-family: font2;
   src: url(/gothamBook.otf);
+  font-display: swap;
 }
 
 * {
@@ -377,6 +379,7 @@ section {
 .productDiv .productText .msg {
   margin: 0.8em 0 0.4em 0;
   color: #333;
+  font-size: 1.1em;
 }
 
 .productDiv .productText a, .productDiv .productText a:visited {
