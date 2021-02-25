@@ -408,7 +408,7 @@ section {
 }
 
 .aboutSection {
-  background-color: #444;
+  background-color: #333333;
 }
 
 .aboutSection .aboutCompanyTextContainer {
@@ -489,7 +489,7 @@ section {
 }
 
 .contactSection {
-  background-color: #333333;
+  background-color: #222;
   padding: 3%;
 }
 
