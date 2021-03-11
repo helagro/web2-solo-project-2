@@ -391,21 +391,21 @@ section {
 }
 
 .productDiv.buds {
-  background-image: url("/img/buds.webp");
+  background-image: url("../img/buds.webp");
   background-size: 70%;
   background-position-y: 10%;
 }
 
 .productDiv.phone {
-  background-image: url("/img/a425g.webp");
+  background-image: url("../img/a425g.webp");
 }
 
 .productDiv.phone-backside {
-  background-image: url("/img/phone-backside.webp");
+  background-image: url("../img/phone-backside.webp");
 }
 
 .productDiv.fridge {
-  background-image: url("/img/fridge.webp");
+  background-image: url("../img/fridge.webp");
 }
 
 .aboutSection {
